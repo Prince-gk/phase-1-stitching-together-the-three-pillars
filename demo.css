@@ -1,36 +1,94 @@
 body {
-  margin: 5% 10%;
-  background-color: rgb(29,161,242);
+	margin: 5% 10%;
+	background-color: rgb(29, 161, 242);
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	color: #333;
 }
 
 body h1 {
-  color: #FFF;
+	color: #fff;
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 2%;
 }
 
 body > header {
-  margin-bottom: 5%;
+	margin-bottom: 5%;
 }
 
 article.media-post {
-  border: solid 1px #000;
-  margin: 2% 3%;
-  background-color: #fff;
+	border: solid 1px #000;
+	border-radius: 10px; /* Adds rounded corners */
+	margin: 2% 3%;
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+	transition: transform 0.2s; /* Adds slight scaling effect on hover */
 }
 
-article.media-post > p {
-  background-color: rgba(0,123,255,0.25);
-  padding: 1em 2em;
+article.media-post:hover {
+	transform: scale(1.02); /* Slightly enlarges the post on hover */
 }
 
 article.media-post > header {
-  padding: 1em 2em;
-  background-color: rgb(225,232,237);
+	padding: 1em 2em;
+	background-color: rgb(225, 232, 237);
+	border-top-left-radius: 10px; /* Matches with border radius */
+	border-top-right-radius: 10px; /* Matches with border radius */
+	font-weight: bold;
+	color: #333;
+}
+
+article.media-post > p {
+	background-color: rgba(
+		0,
+		123,
+		255,
+		0.1
+	); /* Made the blue background softer */
+	padding: 1em 2em;
+	font-size: 1.1rem; /* Slightly larger text for better readability */
 }
 
 article.media-post > footer {
-  color: rgb(170,184,194);
+	padding: 1em 2em;
+	background-color: rgb(245, 245, 245); /* Soft background for footer */
+	border-bottom-left-radius: 10px; /* Matches with border radius */
+	border-bottom-right-radius: 10px; /* Matches with border radius */
+	display: flex;
+	justify-content: flex-end;
 }
 
 article.media-post > footer ul {
-  list-style-type: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+article.media-post > footer li.like {
+	cursor: pointer;
+	font-size: 1.2rem;
+	color: rgb(170, 184, 194);
+	transition: color 0.3s ease;
+}
+
+article.media-post > footer li.like:hover {
+	color: rgb(
+		29,
+		161,
+		242
+	); /* Changes color on hover for better interactivity */
+}
+
+.like-glyph {
+	font-size: 1.5rem; /* Larger size for better clickability */
+	transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition on color and size */
+}
+
+.like-glyph:hover {
+	transform: scale(1.2); /* Slight enlargement on hover for feedback */
+}
+
+.like-glyph.liked {
+	color: red; /* Filled heart is red */
 }
